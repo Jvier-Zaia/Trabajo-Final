@@ -11,12 +11,14 @@ export class EmailService {
 
     this.transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
+        pass: process.env.EMAIL_PASS,
+      },
+      // Timeout de conexión un poco más alto para servidores externos
+      connectionTimeout: 10000,
     });
   }
 
