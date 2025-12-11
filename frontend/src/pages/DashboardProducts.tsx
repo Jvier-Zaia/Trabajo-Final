@@ -225,7 +225,7 @@ export const DashboardProducts = () => {
               <div className="current-image">
                 <p>Imagen actual:</p>
                 <img
-                  src={`http://localhost:4444${editing.image}`}
+                  src={`https://trabajo-final-2flw.onrender.com${editing.image}`}
                   alt="Actual"
                   className="detail-image"
                 />

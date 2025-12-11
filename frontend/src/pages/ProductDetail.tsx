@@ -35,7 +35,7 @@ export const ProductDetail = () => {
     <div className="detail detail-card">
       {product.image && (
         <img
-          src={`http://localhost:4444${product.image}`}
+          src={`https://trabajo-final-2flw.onrender.com${product.image}`}
           alt={product.name}
           className="detail-image"
         />

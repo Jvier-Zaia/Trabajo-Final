@@ -103,7 +103,7 @@ export const Home = () => {
           <article key={p._id} className="card">
             {p.image && (
               <img
-                src={`http://localhost:4444${p.image}`}
+                src={`https://trabajo-final-2flw.onrender.com${p.image}`}
                 alt={p.name}
                 className="card-image"
               />

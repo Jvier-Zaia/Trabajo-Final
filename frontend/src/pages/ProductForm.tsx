@@ -144,7 +144,7 @@ export const ProductForm = () => {
           <div className="current-image">
             <p>Imagen actual:</p>
             <img
-              src={`http://localhost:4444${existingImage}`}
+              src={`https://trabajo-final-2flw.onrender.com${existingImage}`}
               alt="Actual"
               className="detail-image"
             />

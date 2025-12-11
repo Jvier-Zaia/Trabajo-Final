@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { Product } from '../types';
 
 const api = axios.create({
-  baseURL: 'http://localhost:4444/api',
+  baseURL: 'https://trabajo-final-2flw.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
