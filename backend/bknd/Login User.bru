@@ -1,0 +1,25 @@
+meta {
+  name: Login User
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:4444/api/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "zaiajavier1@gmail.com.ar",
+    "password": "123456789",
+    "name": "Javier"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://localhost:4444/api/products/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5ZTQ4OThiMWNjYzMyYTk4NDRlYjEiLCJlbWFpbCI6InphaWFqYXZpZXIxQGdtYWlsLmNvbS5hciIsImlhdCI6MTc2NTQwMzg1MCwiZXhwIjoxNzY1NDQ3MDUwfQ.cO5PHY9ivLIOdCgL_SDL8RhWZEETNTDclta7Ij50xFs
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5ZTQ4OThiMWNjYzMyYTk4NDRlYjEiLCJlbWFpbCI6InphaWFqYXZpZXIxQGdtYWlsLmNvbS5hciIsImlhdCI6MTc2NTQwMzg1MCwiZXhwIjoxNzY1NDQ3MDUwfQ.cO5PHY9ivLIOdCgL_SDL8RhWZEETNTDclta7Ij50xFs
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

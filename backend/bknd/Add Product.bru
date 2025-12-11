@@ -1,0 +1,35 @@
+meta {
+  name: Add Product
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:4444/api/products
+  body: json
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5ZTQ4OThiMWNjYzMyYTk4NDRlYjEiLCJlbWFpbCI6InphaWFqYXZpZXIxQGdtYWlsLmNvbS5hciIsImlhdCI6MTc2NTQwNTE2MiwiZXhwIjoxNzY1NDQ4MzYyfQ.alVqEqq6_aNc6MLlXcVVUqvPCTtB71B2K2F3g-uFv3k
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5ZTQ4OThiMWNjYzMyYTk4NDRlYjEiLCJlbWFpbCI6InphaWFqYXZpZXIxQGdtYWlsLmNvbS5hciIsImlhdCI6MTc2NTQwNTE2MiwiZXhwIjoxNzY1NDQ4MzYyfQ.alVqEqq6_aNc6MLlXcVVUqvPCTtB71B2K2F3g-uFv3k
+}
+
+body:json {
+  {
+    "name": "Laptop Lenovo ThinkPad",
+    "description": "Laptop profesional con procesador Intel i7, 16GB RAM, 512GB SSD",
+    "price": 1200,
+    "category": "Tecnología",
+    "stock": 15
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
