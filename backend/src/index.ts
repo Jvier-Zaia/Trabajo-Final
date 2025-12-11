@@ -12,15 +12,14 @@ import { errorHandler } from './middlewares/errorHandler';
 const app = express();
 const PORT = process.env.PORT || 4444;
 
-// Middlewares
-app.use(cors());
-app.use(express.json());
-app.use(morgan('dev'));
+// Indicar a Express que está detrás de un proxy (Render) para que el rate limiter use X-Forwarded-For correctamente
+app.set('trust proxy', 1);
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+
 app.use('/uploads', express.static('uploads')); // ← AGREGAR ESTA LÍNEA
 
 // Rutas

@@ -10,7 +10,12 @@ export class AuthController {
      try {
         const user = await authService.register(req.body);
          
-        await emailService.sendWelcomeEmail(user.email, user.name);
+        // Enviar email en segundo plano para no bloquear la respuesta al cliente
+        emailService
+          .sendWelcomeEmail(user.email, user.name)
+          .catch((err) => {
+            console.error('Error al enviar email de bienvenida:', err);
+          });
         
         res.status(201).json({
             message:'✔ Usuario registrado exitosamente',
